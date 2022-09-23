@@ -8,7 +8,7 @@ struct ContentView: View {
            Text("Welcome")
                .toolbar {
                    NavigationLink(destination: ContentView2(), isActive: self.$isActive )
-                   {Label("", systemImage: "plus")                    }
+                   {Label("", systemImage: "plus")}
                }
        }
        .navigationViewStyle(StackNavigationViewStyle())
@@ -17,7 +17,6 @@ struct ContentView: View {
 }
 
 struct ContentView2: View {
-   @Environment(\.rootPresentationMode) private var rootPresentationMode: Binding<RootPresentationMode>
    var body: some View {
        VStack {
            Text("First View")
